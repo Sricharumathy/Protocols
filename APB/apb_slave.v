@@ -1,4 +1,4 @@
-module apb_slave(
+module apb_slave1(
 input clk,
 input reset,
 input psel,
@@ -7,8 +7,8 @@ input [7:0] paddr,
 input [7:0] pwdata,
 input pwrite,
 
-output reg pready,
-output reg [7:0] prdata
+output reg pready1,
+output reg [7:0] prdata1
 );
 
 reg [7:0] mem[0:255];
@@ -23,19 +23,19 @@ always @(posedge clk) begin
 		for(i=0;i<256;i=i+1)
 			mem[i]<=8'b0;
 	end
-	else if(psel && penable && pwrite && pready)
+	else if(psel && penable && pwrite && pready1)
 		mem[paddr]<=pwdata;
 end
 
 always @(*) begin
-    pready = 1'b0;
-    prdata = 8'b0;
+    pready1 = 1'b0;
+    prdata1 = 8'b0;
 
     if(psel && penable) begin
-        pready = 1'b1;
+        pready1 = 1'b1;
 
         if(!pwrite)
-            prdata = mem[paddr];
+            prdata1 = mem[paddr];
     end
 end
 

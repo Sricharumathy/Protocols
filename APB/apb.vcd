@@ -1,5 +1,5 @@
 $date
-	Fri Sep  4 12:47:38 2026
+	Sat Sep  5 05:28:17 2026
 $end
 $version
 	Icarus Verilog
@@ -8,205 +8,389 @@ $timescale
 	1s
 $end
 $scope module apb_tb $end
-$var wire 8 ! read_out [7:0] $end
-$var wire 1 " pwrite $end
-$var wire 8 # pwdata [7:0] $end
-$var wire 1 $ psel $end
-$var wire 1 % pready $end
-$var wire 8 & prdata [7:0] $end
-$var wire 1 ' penable $end
-$var wire 8 ( paddr [7:0] $end
-$var reg 8 ) addr [7:0] $end
-$var reg 1 * clk $end
-$var reg 8 + data_in [7:0] $end
-$var reg 1 , reset $end
-$var reg 1 - transfer $end
-$var reg 1 . write $end
+$var wire 1 ! psel0 $end
+$var wire 1 " psel1 $end
+$var wire 8 # read_out [7:0] $end
+$var wire 1 $ pwrite $end
+$var wire 8 % pwdata [7:0] $end
+$var wire 1 & psel $end
+$var wire 1 ' pready1 $end
+$var wire 1 ( pready0 $end
+$var wire 1 ) pready $end
+$var wire 8 * prdata1 [7:0] $end
+$var wire 8 + prdata0 [7:0] $end
+$var wire 8 , prdata [7:0] $end
+$var wire 1 - penable $end
+$var wire 8 . paddr [7:0] $end
+$var reg 8 / addr [7:0] $end
+$var reg 1 0 clk $end
+$var reg 8 1 data_in [7:0] $end
+$var reg 1 2 reset $end
+$var reg 1 3 transfer $end
+$var reg 1 4 write $end
 $scope module dut $end
-$var wire 8 / addr [7:0] $end
-$var wire 1 * clk $end
-$var wire 8 0 data_in [7:0] $end
-$var wire 1 , reset $end
-$var wire 1 - transfer $end
-$var wire 1 . write $end
-$var wire 1 % pready $end
-$var wire 8 1 prdata [7:0] $end
-$var parameter 2 2 ACCESS $end
-$var parameter 2 3 IDLE $end
-$var parameter 2 4 SETUP $end
-$var reg 2 5 nextstate [1:0] $end
-$var reg 8 6 paddr [7:0] $end
-$var reg 1 ' penable $end
-$var reg 1 $ psel $end
-$var reg 8 7 pwdata [7:0] $end
-$var reg 1 " pwrite $end
-$var reg 8 8 read_out [7:0] $end
-$var reg 2 9 state [1:0] $end
+$var wire 8 5 addr [7:0] $end
+$var wire 1 0 clk $end
+$var wire 8 6 data_in [7:0] $end
+$var wire 8 7 prdata [7:0] $end
+$var wire 1 ) pready $end
+$var wire 1 2 reset $end
+$var wire 1 3 transfer $end
+$var wire 1 4 write $end
+$var parameter 2 8 ACCESS $end
+$var parameter 2 9 IDLE $end
+$var parameter 2 : SETUP $end
+$var reg 2 ; nextstate [1:0] $end
+$var reg 8 < paddr [7:0] $end
+$var reg 1 - penable $end
+$var reg 1 & psel $end
+$var reg 8 = pwdata [7:0] $end
+$var reg 1 $ pwrite $end
+$var reg 8 > read_out [7:0] $end
+$var reg 2 ? state [1:0] $end
 $upscope $end
 $scope module dut1 $end
-$var wire 1 * clk $end
-$var wire 8 : paddr [7:0] $end
-$var wire 1 ' penable $end
-$var wire 1 $ psel $end
-$var wire 8 ; pwdata [7:0] $end
-$var wire 1 " pwrite $end
-$var wire 1 , reset $end
-$var reg 8 < prdata [7:0] $end
-$var reg 1 % pready $end
-$var integer 32 = i [31:0] $end
+$var wire 1 0 clk $end
+$var wire 8 @ paddr [7:0] $end
+$var wire 1 - penable $end
+$var wire 1 ! psel $end
+$var wire 8 A pwdata [7:0] $end
+$var wire 1 $ pwrite $end
+$var wire 1 2 reset $end
+$var reg 8 B prdata1 [7:0] $end
+$var reg 1 ( pready1 $end
+$var integer 32 C i [31:0] $end
+$upscope $end
+$scope module dut2 $end
+$var wire 1 0 clk $end
+$var wire 8 D paddr [7:0] $end
+$var wire 1 - penable $end
+$var wire 1 " psel $end
+$var wire 8 E pwdata [7:0] $end
+$var wire 1 $ pwrite $end
+$var wire 1 2 reset $end
+$var reg 8 F prdata2 [7:0] $end
+$var reg 1 ' pready2 $end
+$var integer 32 G i [31:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 $comment Show the parameter values. $end
 $dumpall
-b1 4
-b0 3
-b10 2
+b1 :
+b0 9
+b10 8
 $end
 #0
 $dumpvars
-b100000000 =
+b100000000 G
+b0 F
+b0 E
+b0 D
+b100000000 C
+b0 B
+b0 A
+b0 @
+bx ?
+bx >
+b0 =
 b0 <
 b0 ;
-b0 :
-bx 9
-bx 8
 b0 7
 b0 6
 b0 5
+04
+03
+12
 b0 1
-b0 0
+00
 b0 /
-0.
+b0 .
 0-
-1,
+b0 ,
 b0 +
-0*
-b0 )
-b0 (
+b0 *
+0)
+0(
 0'
-b0 &
-0%
+0&
+b0 %
 0$
-b0 #
+bx #
 0"
-bx !
+0!
 $end
 #10
-b0 !
-b0 8
-b0 9
-b100000000 =
-1*
-#20
-b1 5
-0*
-1-
-1.
-b1110111 +
-b1110111 0
-b10100101 )
-b10100101 /
-0,
-#30
-b1110111 #
-b1110111 7
-b1110111 ;
-b10100101 (
-b10100101 6
-b10100101 :
-1"
-1$
-b10 5
-b1 9
-1*
-#40
-0*
-#50
-b1 5
-1%
-1'
-b1110111 #
-b1110111 7
-b1110111 ;
-b10100101 (
-b10100101 6
-b10100101 :
-1"
-1$
-b10 9
-1*
-#60
-b0 5
-0*
-0-
-#70
-0%
 b0 #
-b0 7
+b0 >
+b0 ?
+b100000000 C
+b100000000 G
+10
+#20
+b1 ;
+00
+13
+14
+b1110111 1
+b1110111 6
+b10100101 /
+b10100101 5
+02
+#30
+1"
+0!
+b1110111 %
+b1110111 =
+b1110111 A
+b1110111 E
+b10100101 .
+b10100101 <
+b10100101 @
+b10100101 D
+1$
+1&
+b10 ;
+b1 ?
+10
+#40
+00
+#50
+b1 ;
+1)
+1'
+1-
+b1110111 %
+b1110111 =
+b1110111 A
+b1110111 E
+b10100101 .
+b10100101 <
+b10100101 @
+b10100101 D
+1$
+1&
+b10 ?
+10
+#60
 b0 ;
-b0 (
-b0 6
-b0 :
+00
+03
+#70
+0)
 0"
 0'
-0$
-b0 9
-1*
-#80
-b1 5
-0*
-1-
-0.
-#90
-b1110111 #
-b1110111 7
-b1110111 ;
-b10100101 (
-b10100101 6
-b10100101 :
-1$
-b10 5
-b1 9
-1*
-#100
-0*
-#110
-b1 5
-b1110111 &
-b1110111 1
-b1110111 <
-1%
-1'
-b1110111 #
-b1110111 7
-b1110111 ;
-b10100101 (
-b10100101 6
-b10100101 :
-1$
-b10 9
-1*
-#120
-b0 5
-0*
-0-
-#130
-b0 &
-b0 1
+b0 %
+b0 =
+b0 A
+b0 E
+b0 .
 b0 <
-0%
-b0 #
-b0 7
-b0 ;
-b0 (
-b0 6
-b0 :
-0'
+b0 @
+b0 D
 0$
-b1110111 !
-b1110111 8
-b0 9
-1*
+0-
+0&
+b0 ?
+10
+#80
+b1 ;
+00
+13
+04
+#90
+1"
+0!
+b1110111 %
+b1110111 =
+b1110111 A
+b1110111 E
+b10100101 .
+b10100101 <
+b10100101 @
+b10100101 D
+1&
+b10 ;
+b1 ?
+10
+#100
+00
+#110
+b1 ;
+b1110111 ,
+b1110111 7
+1)
+b1110111 *
+b1110111 F
+1'
+1-
+b1110111 %
+b1110111 =
+b1110111 A
+b1110111 E
+b10100101 .
+b10100101 <
+b10100101 @
+b10100101 D
+1&
+b10 ?
+10
+#120
+b0 ;
+00
+03
+#130
+0)
+b0 ,
+b0 7
+b0 *
+b0 F
+0'
+0"
+b0 %
+b0 =
+b0 A
+b0 E
+b0 .
+b0 <
+b0 @
+b0 D
+0-
+0&
+b1110111 #
+b1110111 >
+b0 ?
+10
 #140
-0*
+b1 ;
+00
+13
+14
+b100001 1
+b100001 6
+b1000011 /
+b1000011 5
+#150
+1!
+b100001 %
+b100001 =
+b100001 A
+b100001 E
+b1000011 .
+b1000011 <
+b1000011 @
+b1000011 D
+1$
+1&
+b10 ;
+b1 ?
+10
+#160
+00
+#170
+b1 ;
+1)
+1(
+1-
+b100001 %
+b100001 =
+b100001 A
+b100001 E
+b1000011 .
+b1000011 <
+b1000011 @
+b1000011 D
+1$
+1&
+b10 ?
+10
+#180
+b0 ;
+00
+03
+#190
+0)
+0!
+0(
+b0 %
+b0 =
+b0 A
+b0 E
+b0 .
+b0 <
+b0 @
+b0 D
+0$
+0-
+0&
+b0 ?
+10
+#200
+b1 ;
+00
+13
+04
+#210
+1!
+b100001 %
+b100001 =
+b100001 A
+b100001 E
+b1000011 .
+b1000011 <
+b1000011 @
+b1000011 D
+1&
+b10 ;
+b1 ?
+10
+#220
+00
+#230
+b1 ;
+b100001 ,
+b100001 7
+1)
+b100001 +
+b100001 B
+1(
+1-
+b100001 %
+b100001 =
+b100001 A
+b100001 E
+b1000011 .
+b1000011 <
+b1000011 @
+b1000011 D
+1&
+b10 ?
+10
+#240
+b0 ;
+00
+03
+#250
+0)
+b0 ,
+b0 7
+b0 +
+b0 B
+0(
+0!
+b0 %
+b0 =
+b0 A
+b0 E
+b0 .
+b0 <
+b0 @
+b0 D
+0-
+0&
+b100001 #
+b100001 >
+b0 ?
+10
+#260
+00
